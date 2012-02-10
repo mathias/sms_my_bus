@@ -9,5 +9,14 @@ require 'json'
 
 
 module SmsMyBus
-  # Your code goes here...
+
+  def self.key= key
+    @key = key
+  end
+
+  def self.key
+    raise 'No key set; please see README.md' unless @key
+    @key
+  end
+
 end

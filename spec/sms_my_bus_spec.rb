@@ -1,7 +1,22 @@
 require 'spec_helper'
 
 describe 'SmsMyBus' do
+  describe 'key' do
+    let(:key) { 'foobazzlew' }
+    it 'should be set' do
+      SmsMyBus.key = key
+      SmsMyBus.key.should == key
+    end
+    it 'should raise if key is not set' do
+      SmsMyBus.key.should raise_error
+    end
+  end
+
   describe SmsMyBus::Schedules do
+    before do
+      SmsMyBus.key = ENV['SMSMYBUS_KEY']
+    end
+
     describe 'get_arrivals' do
       let(:invalid_stop_id) { 0 }
       let(:valid_stop_id) { 1101 }
