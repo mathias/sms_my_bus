@@ -1,6 +1,6 @@
 # SmsMyBus
 
-TODO: Write a gem description
+Integrate SMSMyBus into your Ruby apps quickly and easily.
 
 ## Installation
 
@@ -18,7 +18,11 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+You will need set your SMSMyBus API key:
+
+    SmsMyBus.key = 'API KEY HERE'
+    
+If you don't want to check your API key into your git repo, we recommend keeping the API key in an ENV variable or in something like [Idkfa](https://github.com/bendyworks/idkfa).
 
 ## Contributing
 
