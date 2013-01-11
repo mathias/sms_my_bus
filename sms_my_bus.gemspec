@@ -2,8 +2,8 @@
 require File.expand_path('../lib/sms_my_bus/version', __FILE__)
 
 Gem::Specification.new do |gem|
-  gem.authors       = ["Matt Gauger", "Jaymes Waters"]
-  gem.email         = ["matt.gauger@gmail.com", "jaymes@bendyworks.com"]
+  gem.authors       = ["Matt Gauger", "Jaymes Waters", "Ashe Dryden"]
+  gem.email         = ["matt.gauger@gmail.com", "jaymes@bendyworks.com", "ashedryden@gmail.com"]
   gem.description   = %q{A gem to talk to the awesome SMSMyBus API in Madison, WI.}
   gem.summary       = %q{SMSMyBus API integration}
   gem.homepage      = "http://github.com/bendyworks/sms_my_bus"
