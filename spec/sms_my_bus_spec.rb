@@ -53,6 +53,4 @@ describe 'SmsMyBus' do
       end
     end
   end
-
-  describe 'Notifications'
 end
