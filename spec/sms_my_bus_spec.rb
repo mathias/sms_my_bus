@@ -12,6 +12,22 @@ describe 'SmsMyBus' do
     end
   end
 
+  describe 'request_uri' do
+    context 'with opts' do
+      let(:expected_uri) { 'http://api.smsmybus.com/v1/getroutes?foo=bar&key=foobazzlew' }
+      it 'generates the correct URI' do
+        SmsMyBus.request_uri('getroutes', {:foo => 'bar'}).should == expected_uri
+      end
+    end
+    context 'with no opts' do
+      let(:expected_uri) { 'http://api.smsmybus.com/v1/getroutes?key=foobazzlew' }
+
+      it 'generates the correct URI' do
+        SmsMyBus.request_uri('getroutes').should == expected_uri
+      end
+    end
+  end
+
   describe SmsMyBus::Schedules do
     before do
       SmsMyBus.key = ENV['SMSMYBUS_KEY']
